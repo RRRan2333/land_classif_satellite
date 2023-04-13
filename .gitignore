@@ -1,6 +1,5 @@
 dataset/
-model/
-model_1/
+model*
 test.ipynb
 convnext_base_21k_1k_224_fe.sav
 test.py
