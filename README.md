@@ -11,6 +11,9 @@
 - Merged `train.csv` & `validation.csv` into 'train', then train_test_split() by 8:2. 
 - `test.csv` will be left untouched till the very end. 
 
+# GridSearch (New, 2024/04/20)
+Tried to do grid search but always have memory issues even when I'm only using 1k/24k images for the grid search. Using a subset is already a questionable decision for gird-search, yet it still crashes. Time to spend some money and make it work on Google Colab Pro, etc. Hopefully we will be able to run grid-search successfully with help from there. (Geran)
+
 # Models
 *exported model files/folders are synced via SharePoint, not GitHub. Please download models from SharePoint to your local directory so that the models load correctly.*
 
