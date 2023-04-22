@@ -16,6 +16,18 @@
 
 I admit the naming of models isn't great right now. Bare with me. 
 
+## model_MobileNet_nFull_epoch10_batch32 (2024/04/22)
+- Top 1 accuracy 0.92. 10 epochs. 
+- Awkward, since it actually surpassed the ConvNeXt performance. 
+
+## model_EfficientNetB0_nFull_epoch10_batch32 (2024/04/22)
+- I don't understand why I can't get the model to go beyond 15% accuracy, no matter how many epochs/batch_size. 
+- Trained by the file 'main_EfficientNetB0'. Whatever. 
+
+## model_vit_classifier (2024/04/21)
+- Trained by Mitch. ~88% accuracy. 
+- Model can be found on SharePoint. 
+
 ## model_resnet50_nFull_epoch20_batch32_lr.00001 (2024/04/21)
 - Ran another 10 epochs on top of the previous model, which means this model is obtained after 20 epochs, with a learning rate of 0.00001. 
 - Validation accuracy now hovers around 45~55%, with some rather wide fluctuations. 
