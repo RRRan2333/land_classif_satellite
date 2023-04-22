@@ -11,13 +11,22 @@
 - Merged `train.csv` & `validation.csv` into 'train', then train_test_split() by 8:2. 
 - `test.csv` will be left untouched till the very end. 
 
-# GridSearch (New, 2024/04/20)
-Tried to do grid search but always have memory issues even when I'm only using 1k/24k images for the grid search. Using a subset is already a questionable decision for gird-search, yet it still crashes. Time to spend some money and make it work on Google Colab Pro, etc. Hopefully we will be able to run grid-search successfully with help from there. (Geran)
-
 # Models
 *exported model files/folders are synced via SharePoint, not GitHub. Please download models from SharePoint to your local directory so that the models load correctly.*
 
 I admit the naming of models isn't great right now. Bare with me. 
+
+## model_resnet50_nFull_epoch20_batch32_lr.00001 (2024/04/21)
+- Ran another 10 epochs on top of the previous model, which means this model is obtained after 20 epochs, with a learning rate of 0.00001. 
+- Validation accuracy now hovers around 45~55%, with some rather wide fluctuations. 
+
+## model_resnet50_nFull_epoch10_batch32_lr.00001 (2024/04/21)
+- keras pre-trained model: ResNet50 w Imagenet weights
+- 1/10 of default learning rate, which increased validation accuracy to about 47%. The gap between validation and training accuracy is low, which suggests underfitting. 
+- Had a lot difficulty bringing the model performance up. Default learning rate (0.0001) & batch_size (32) resulted in ~20% accuracy, while higher batch size + higher learning rate (64 & 0.001) resulted in 10~20% accuracy, which is horrible. 
+
+# GridSearch (New, 2024/04/20)
+Tried to do grid search but always have memory issues even when I'm only using 1k/24k images for the grid search. Using a subset is already a questionable decision for gird-search, yet it still crashes. Time to spend some money and make it work on Google Colab Pro, etc. Hopefully we will be able to run grid-search successfully with help from there. (Geran)
 
 ## model_1_nFull_epoch5_batch32 (2024/04/12)
 - pre-trained model: convnext_base_21k_1k_224_fe
